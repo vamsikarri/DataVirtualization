@@ -1,0 +1,81 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "gathi-fedquery"
+    },
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist",
+            "assets": [
+                "assets",
+                "favicon.ico"
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "test": "test.ts",
+            "tsconfig": "tsconfig.app.json",
+            "testTsconfig": "tsconfig.spec.json",
+            "prefix": "app",
+            "styles": [
+                "assets/css/material.min.css",
+                "assets/css/materialize.min.css",
+                "assets/css/dataTables.material.min.css",
+                "assets/css/buttons.dataTables.min.css",
+                "assets/css/font-awesome.min.css",
+                "assets/css/simple-line-icons.css",
+                "assets/css/styles.css",
+                "assets/css/dialog-polyfill.css"
+            ],
+            "scripts": [
+                "../node_modules/jquery/dist/jquery.min.js",
+                "../node_modules/jquery-ui-dist/jquery-ui.min.js",
+                "assets/js/jquery.dataTables.min.js",
+                "assets/js/bootstrap.min.js",
+                "assets/js/material.min.js",
+                "assets/js/materialize.min.js",
+                "assets/js/dataTables.material.min.js",
+                "assets/js/dataTables.buttons.min.js",
+                "assets/js/buttons.flash.min.js",
+                "assets/js/jszip.min.js",
+                "assets/js/pdfmake.min.js",
+                "assets/js/vfs_fonts.js",
+                "assets/js/buttons.html5.min.js",
+                "assets/js/buttons.print.min.js",
+                "assets/js/dialog-polyfill.js",
+                "assets/js/ColReorderWithResize.js"
+            ],
+            "environmentSource": "environments/environment.ts",
+            "environments": {
+                "dev": "environments/environment.ts",
+                "prod": "environments/environment.prod.ts"
+            }
+        }
+    ],
+    "e2e": {
+        "protractor": {
+            "config": "./protractor.conf.js"
+        }
+    },
+    "lint": [
+        {
+            "project": "src/tsconfig.app.json"
+        },
+        {
+            "project": "src/tsconfig.spec.json"
+        },
+        {
+            "project": "e2e/tsconfig.e2e.json"
+        }
+    ],
+    "test": {
+        "karma": {
+            "config": "./karma.conf.js"
+        }
+    },
+    "defaults": {
+        "styleExt": "css",
+        "component": {}
+    }
+}
