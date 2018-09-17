@@ -1,0 +1,173 @@
+#split-bar {
+    background-color: black;
+    height: 100%;
+    float: right;
+    width: 4px;
+    cursor: col-resize;
+}
+
+.sidebar {
+    display: inline;
+    padding: 0;
+    overflow: auto;
+    color: #fff;
+    background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
+}
+
+.sidebar .sidebar-close {
+    position: absolute;
+    right: 0;
+    display: none;
+    padding: 0 1rem;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 55px;
+    color: #fff;
+    background: 0;
+    border: 0;
+    opacity: .8; 
+}
+
+#nav-back {
+    display: inline-block;
+    position: absolute;
+    color: #526b78;
+    background-color: #fff;
+    border-radius:10px;
+    border:1px solid #fff;
+    padding:4px;
+    left: 5px;
+    font-size: 20px;
+}
+
+#nav-forward {
+    display: inline-block;
+    position: absolute;
+    color: #526b78;
+    background-color: #fff;
+    border-radius:10px;
+    border:1px solid #fff;
+    padding:4px;
+    right: 5px;
+   
+    font-size: 20px;
+}
+
+#nav-refresh {
+    display: inline-block;
+    position: absolute;
+    color: #526b78;
+    background-color: #fff;
+    margin-left:10px;
+    border-radius:10px;
+    padding:4px;
+    border:1px solid #fff;
+    left: 35px;
+ 
+    font-size: 20px;
+}
+
+#nav-name {
+    position: relative;
+    display: inline-block, table-cell;
+    text-align: center;
+    pointer-events: none;
+    font-size:15px;
+    margin-top:5px;
+    top: 1%;
+}
+
+#nav-search {
+    position: relative;
+    display: inline-block;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 3%;
+    background-color: #fff;
+    color:#484848;
+    padding: 4px 4px 4px 10px;
+    border-radius:30px;
+    width: fill;
+}
+
+#nav-message {
+    position: relative;
+    display: inline-block, table-cell;
+    text-align: center;
+    top: 18%;
+}
+
+#nav-browser {
+    position: relative;
+    left: 4%;
+    font-size: 15px;
+    margin-top: 2%;
+    margin-bottom:4%;
+}
+
+
+#nav-context-menu {
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    white-space: nowrap;
+    font-family: sans-serif;
+    background: #FFF;
+    color: #333;
+    border-radius: 5px;
+    padding: 0;
+}
+
+:host ::ng-deep #nav-context-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    list-style-type: none;
+    transition: all .3s ease;
+    user-select: none;
+}
+
+:host ::ng-deep #nav-context-menu li:hover {
+    background-color: #DEF;
+}
+
+:host ::ng-deep .nav-child {
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;  
+    user-select: none;
+    padding:4px;
+}
+
+:host ::ng-deep .search-sel {
+    color: #0180D4;
+}
+
+i.fa.MySQL{
+    color:#000;
+    margin-right: 10px;
+}
+
+.navigation-icons{
+padding:3px 0px 7px 0px;
+color: #fff;
+}
+
+:host ::ng-deep .search-bg {
+
+    border-bottom: 1px solid #8c8c8c;
+
+    width: 100%;
+    z-index: 9;
+}
+
+.header-icon{
+    font-size: 20px;
+    color: #0870c9;
+}
+
+

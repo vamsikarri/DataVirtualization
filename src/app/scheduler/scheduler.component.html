@@ -1,0 +1,170 @@
+<div class="modal fed-bd-gry">
+    <div class="modal-content fed-pd-10 fed-bd-gry">
+        <h4>
+            Query Scheduler
+            <i style="float:right;color:#000" class="fa fa-close modal-action modal-close"></i>
+        </h4>
+        <div class="modal-content fed-pd-10 feb-pdb-35">
+            <ul class="collapsible">
+                <li>
+                <div class="collapsible-header"><i class="material-icons">star</i>Required Fields</div>
+                <div class="collapsible-body" style="float:center;margin:20px;">
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Job Name</label>
+                        <input placeholder="" type="text" style="width:100%" class="job-name">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Query ID</label>
+                        <input placeholder="" type="text" style="width:100%" class="query-id" disabled>
+                       
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Query</label>
+                        <input placeholder="" type="text" style="width:100%" class="sql-query">
+                        
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                            <label>SLA Offset Days</label>
+                            <input placeholder="" type="text" style="width:100%" class="sla-offset-day-count">
+                            
+                        </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Calendar</label>
+                        <select class="calendar-names">
+                                <option class="left" selected="">daily_5AM</option>
+                                <option class="left">past_12AM</option>
+                                <option class="left">weekday_clndr</option>
+                                <option class="left">yearly_clndr</option>
+                                <option class="left">custom_clndr</option>
+                        </select>
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Schedule</label>
+                        <select class="schedule-names">
+                            <option class="left">COD_DEMO_SCH</option>
+                            <option class="left">dly</option>
+                            <option class="left">MDM_Loading_sch</option>
+                            <option class="left">pgjob_sch</option>
+                            <option class="left">mysql_sch</option>
+                            <option class="left">db2_sch</option>
+                            <option class="left">hive_sch</option>
+                            <option class="left">COD_DEMO_SCH1</option>
+                        </select>
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Job Template</label>
+                        <select class="template-names">
+                           
+                        </select>
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Job Effective Start Date</label>
+                        <input placeholder="yyyy-mm-dd" type="text"  style="width:100%" class="job-eff-start-dt datepicker">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Schedule Effective Start Date</label>
+                        <input placeholder="yyyy-mm-dd" type="text"  style="width:100%" class="sch-eff-start-dt datepicker">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Schedule Start Time</label>
+                        <input placeholder="hh:mm:ss" type="text"  style="width:100%" class="sch-start-tm timepicker">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>SLA Start Time</label>
+                        <input placeholder="hh:mm:ss" type="text"  style="width:100%" class="sla-start-tm timepicker">
+                       
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>SLA End Time</label>
+                        <input placeholder="hh:mm:ss" type="text"  style="width:100%" class="sla-end-tm timepicker">
+                       
+                    </div>
+
+                    
+                </div>
+                </li>
+                <li>
+                <div class="collapsible-header"><i class="material-icons">star_border</i>Optional Fields</div>
+                <div class="collapsible-body" style="float:center;margin:20px;">
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Predecessor Condition</label>
+                        <input placeholder="" type="text" style="width:100%" class="pred-cond">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Predecessor Condition Type</label>
+                        <input placeholder="" type="text" style="width:100%" class="pred-cond-type">
+                       
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Support Group Email</label>
+                        <input placeholder="" type="text" style="width:100%" class="support-group-email">
+                       
+                    </div>
+                    
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>Job Priority Number</label>
+                        <input placeholder="" type="text" style="width:100%" class="job-priority-number">
+                       
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>maximum Run Alarm seconds count</label>
+                        <input placeholder="" type="text" style="width:100%" class="max-run-alarm-number">
+                        
+                    </div>
+                    <div  style="width:325px;display:inline-block;padding:10px">
+                        <label>minimum Run Alarm seconds count</label>
+                        <input placeholder="" type="text" style="width:100%" class="min-run-alarm-number">
+                        
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                            <label>Frequency</label>
+                            <select class="frequency-names">
+                                <option class="left">Daily</option>
+                                <option class="left">Weekly</option>
+                                <option class="left">Monthly</option>
+                                <option class="left">Yearly</option>
+                            </select>
+                        </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Critical Job Indicator</label>
+                        <select class="crtical-job-ind">
+                            <option class="left">Y</option>
+                            <option class="left" selected="">N</option>
+                        </select>
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Financial Penality Indicator</label>
+                        <select class="financial-pen-ind">
+                            <option class="left">Y</option>
+                            <option class="left" selected="">N</option>
+                        </select>
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Create Dag Indicator</label>
+                        <select class="create-dag-ind">
+                            <option class="left">Y</option>
+                            <option class="left" selected="">N</option>
+                        </select>
+                    </div>
+                    <div style="width:325px;display:inline-block;padding:10px">
+                        <label>Next Business Day Indicator</label>
+                        <select class="bst-names">
+                            <option class="left">Y</option>
+                            <option class="left" selected="">N</option>
+                        </select>
+                    </div>
+                </div>
+                </li>
+            </ul>
+            <button style="margin-left: auto;margin-right: auto;width: 20%" (click)="scheduleQuery()" class="modal-action mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn-bg-color">Schedule</button>
+            <div class="Scheduled-status" style="margin-top:10px;text-align: center">
+
+            </div>
+        </div>
+    </div>
+</div>

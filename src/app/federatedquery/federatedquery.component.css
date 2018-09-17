@@ -1,0 +1,200 @@
+.full-width {
+    width: 100%;
+}
+
+.editor {
+    width: 100%;
+    min-height: 700px;
+    padding: 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    display: inline-block;
+}    
+  
+.card-body, .card-block {
+    height: 400px;
+}
+
+.progbarsuccesscol {
+    background-color: #26a69a;
+}
+
+.progbarfailcol {
+    background-color: #dd514c;
+}
+
+.save-modal { 
+    width: 35% !important ; 
+    height: 250px !important ; 
+    background-color: #fff !important
+}
+
+.queryNavigator {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.dataTables_filter {
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+     -khtml-user-select: all;
+       -moz-user-select: all;
+        -ms-user-select: all;
+            user-select: all; 
+}
+
+.button-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+/* new ui */
+
+.fed-pd-10{
+    padding: 10px !important;
+} 
+.fed-bd-gry{
+    background-color: #eaeaea !important;
+}
+
+.feb-pdb-35{
+    padding-bottom: 35px !important;
+}
+
+.fed-bd-gry h4{
+    font-size: 1.2rem !important;
+    color:#076fc9 !important;
+}
+
+.fed-bd-gry h4 i{
+    color:#5a5a5a !important;
+}
+
+.btn-bg-color{
+    background-color:#5fa845 !important;
+    color: #fff !important;
+}
+
+.btn-bg-color:hover, .btn-bg-color:active{
+    background-color:#498433;
+}
+
+.fed-height{
+    height:200px !important;
+    overflow: hidden !important;
+}
+
+.uploadbtn-bg-color{
+    background-color: #076fc9 !important;
+    border-color:#076fc9 !important;
+    color:#fff !important;
+    opacity: 1 !important;
+}
+
+.uploadbtn-bg-color:hover, .uploadbtn-bg-color:active{
+    background-color:#076fc9 !important;
+    border-color:#076fc9 !important;
+}
+
+.feb-upload-inpt{
+    position: absolute;
+    border: none !important;
+    top: 6px;
+    left: 0;
+    padding-left: 40px !important;
+    width: 85%; 
+}
+
+.feb-placeholder{
+    color: #bbb;
+    font-size: 14px;
+    left: 42px;
+    position: absolute;
+    top: 7px;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+    z-index: 7;
+}
+
+.added-placeholder .feb-placeholder {
+    top: -21px;
+    font-size: 14px;
+    color: #00add5;
+    left: 0;
+}
+
+.btn-default:hover .delete-file {
+    visibility: visible;
+}
+
+.btn-default .delete-file {
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    font-size: 16px;
+    opacity: .8;
+    cursor: pointer;
+    z-index: 99;
+    visibility: hidden;
+}
+
+.feb-upload-inpt-tab {
+    position: absolute;
+    border: none !important;
+    top: 6px;
+    left: 0;
+    padding-left: 40px !important;
+    width: 75%; 
+}
+
+:host ::ng-deep .schedule, :host ::ng-deep .history-query-results, :host ::ng-deep .scheduled-query-results {
+    cursor: pointer;
+    color: blue !important;
+    text-decoration: underline !important;
+}
+
+:host ::ng-deep .query-data {
+    white-space: normal !important;
+    width: 200px;
+}
+
+:host ::ng-deep .history-failure {
+    color: red;
+}
+
+:host ::ng-deep .history-success {
+    color: green;
+}
+
+:host ::ng-deep .schedule-failure {
+    color: red;
+}
+
+:host ::ng-deep .schedule-success {
+    color: green;
+}
+
+.i-icon{
+    color: #536c79;
+}
+
+.i-icon:hover{
+    color:#000;
+}
+.btn-color{
+    background-color:#f9f9f9;
+}
+
+.main{
+    min-height: 870px;
+}
+
+:host ::ng-deep .dropdown-content{
+    max-height: 300px;
+}

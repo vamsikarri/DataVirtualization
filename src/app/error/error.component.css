@@ -1,0 +1,226 @@
+/*
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+  }
+  .message-box {
+    height: 200px;
+    width: 380px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: 50px;
+    color: #FFF;
+    font-family: Roboto;
+    font-weight: 300;
+  }
+  .message-box h1 {
+    font-size: 60px;
+    line-height: 46px;
+    margin-bottom: 40px;
+  }
+  .buttons-con .action-link-wrap {
+    margin-top: 40px;
+  }
+  .buttons-con .action-link-wrap a {
+    background: #68c950;
+    padding: 8px 25px;
+    border-radius: 4px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px
+  }
+  .buttons-con .action-link-wrap a:hover {
+    background: #5A5C6C;
+    color: #fff;
+  }
+  
+  #Polygon-1 , #Polygon-2 , #Polygon-3 , #Polygon-4 , #Polygon-4, #Polygon-5 {
+    animation: float 1s infinite ease-in-out alternate;
+  }
+  #Polygon-2 {
+    animation-delay: .2s; 
+  }
+  #Polygon-3 {
+    animation-delay: .4s; 
+  }
+  #Polygon-4 {
+    animation-delay: .6s; 
+  }
+  #Polygon-5 {
+    animation-delay: .8s; 
+  }
+  
+  @keyframes float {
+      100% {
+      transform: translateY(20px);
+    }
+  }
+  @media (max-width: 450px) {
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -250px;
+      margin-left: -190px;
+    }
+    .message-box {
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -190px;
+      text-align: center;
+    }
+  }
+
+  body {
+    width: 100wh;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, rgb(177, 92, 123), #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+  }
+  
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  h1,h6 {
+    font-family: 'Open Sans';
+    font-weight: 300;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+  }
+  */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .error-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .error-page h1 {
+    font-size: 16vh;
+    font-weight: bold;
+    position: relative;
+    margin: -8vh 0 0;
+    padding: 0;
+  }
+  .error-page h1:after {
+    content: attr(data-h1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: transparent;
+    /* webkit only for graceful degradation to IE */
+    background: -webkit-repeating-linear-gradient(-45deg, #71b7e6, #69a6ce, #b98acc, #ee8176, #b98acc, #69a6ce, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
+    animation: animateTextBackground 10s ease-in-out infinite;
+  }
+  .error-page h1 + p {
+    color: #d6d6d6;
+    font-size: 6vh;
+    font-weight: bold;
+    line-height: 10vh;
+    max-width: 600px;
+    position: relative;
+  }
+  .error-page h1 + p:after {
+    content: attr(data-p);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
+  
+
+  
+  @keyframes animateTextBackground {
+    0% {
+      background-position: 0 0;
+    }
+    25% {
+      background-position: 100% 0;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    75% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  @media (max-width: 767px) {
+    .error-page h1 {
+      font-size: 32vw;
+    }
+    .error-page h1 + p {
+      font-size: 8vw;
+      line-height: 10vw;
+      max-width: 70vw;
+    }
+  }
+  

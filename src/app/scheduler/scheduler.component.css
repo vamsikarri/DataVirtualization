@@ -1,0 +1,62 @@
+.modal {
+    width: 85% !important ; 
+    height: 620px !important ; 
+    overflow: auto; 
+    background-color: #fff !important;
+}
+
+.fed-pd-10{
+    padding: 10px !important;
+} 
+
+.fed-bd-gry{
+    background-color: #eaeaea !important;
+}
+
+.feb-pdb-35{
+    padding-bottom: 35px !important;
+}
+
+.fed-bd-gry h4{
+    font-size: 1.2rem !important;
+    color:#076fc9 !important;
+}
+
+.fed-bd-gry h4 i{
+    color:#5a5a5a !important;
+}
+
+.btn-bg-color{
+    background-color:#5fa845 !important;
+    color: #fff !important;
+}
+
+.btn-bg-color:hover, .btn-bg-color:active{
+    background-color:#498433;
+}
+
+.i-icon{
+    color: #536c79;
+}
+
+.i-icon:hover{
+    color:#000;
+}
+
+ol, ul {
+    font-size: 14px;
+    line-height: 20px !important;
+    color:#000;
+}
+
+.collapsible-header{
+    border: 2px solid #eaeaea;
+}
+
+:host ::ng-deep .modal{
+    width:100%;
+}
+
+:host ::ng-deep .dropdown-content{
+    max-height: 300px;
+}

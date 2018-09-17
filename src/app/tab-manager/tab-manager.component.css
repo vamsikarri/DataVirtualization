@@ -1,0 +1,61 @@
+.tab-container {
+    display: -webkit-box;
+    padding-left: 6px;
+    height: 35px;
+    -webkit-box-align: end;
+    --active-tab-color: #668799;
+    --inactive-tab-color: #3d525c;
+}
+
+:host ::ng-deep .tab {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 6px;
+    cursor: pointer;
+    color:#fff;
+    background-color:var(--inactive-tab-color);
+}
+
+:host ::ng-deep .clear-tab {
+    display: inline-block;
+    margin-left: 10px;
+    color:#fff;
+}
+
+:host ::ng-deep .active {
+    background-color: var(--active-tab-color);
+}
+
+:host ::ng-deep .tab.tab-danger {
+    background-color: #e60000;
+}
+
+:host ::ng-deep .tab.tab-success {
+    background-color: #00b300;
+}
+
+:host ::ng-deep .tab.active.loading-shimmer {
+    background: linear-gradient(to right, var(--active-tab-color) 8%, var(--inactive-tab-color) 18%, var(--active-tab-color) 33%);
+}
+
+:host ::ng-deep .tab.loading-shimmer {
+    animation-name: loading-shimmer;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, var(--inactive-tab-color) 8%, var(--active-tab-color) 18%, var(--inactive-tab-color) 33%);
+}
+
+.tab-plus {
+    padding: 6px;
+    color:#fff;
+    background-color: #546b79;
+    cursor: pointer;
+}
+
+:host ::ng-deep .z-depth {
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.14), 0 5px 5px 0 rgba(0,0,0,.12) !important;
+    transform: translate3d(0,0,0);
+    transition: background .4s cubic-bezier(.25,.8,.25,1), box-shadow 280ms cubic-bezier(.4,0,.2,1);
+  }

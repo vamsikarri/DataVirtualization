@@ -1,0 +1,200 @@
+<!--Federated Query Main Body-->
+<main class="main">
+    <!--Buttons for Federated Query-->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-menu">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a draggable="false" class="waves-effect waves-light btn btn-color" href="index.html#/home" title="Home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn execute-query btn-color" (click)="executeQuery()" title="Run">
+                    <i class="fa fa-bolt i-icon"></i>
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn stop-query btn-color" (click)="stopQuery()" title="Stop Query">
+                    <img style="width:20px;height:auto" src="../../assets/image/stop.png" />
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn editor-clear btn-color" title="Clear">
+                    <i class="fa fa-eraser i-icon"></i>
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn save-query btn-color" title="Save Query">
+                    <i class="fa fa-save i-icon"></i>
+                </a>
+                <app-variable-set-modal></app-variable-set-modal>
+                <a draggable="false" class="waves-effect waves-light btn btn-color" (click)="openVariableSet()" title="Set Variables">
+                    <img style="width:19px;height:auto" src="../../assets/image/106842.png" />
+                </a>
+                <app-scheduler></app-scheduler>
+                <a draggable="false" class="waves-effect waves-light btn btn-color" (click)="openScheduler()" title="Schedule Query">
+                    <i class="fa fa-list-alt i-icon"></i>
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn editor-format btn-color" title="Text Format">
+                    <img style="width:19px;height:auto" src="../../assets/image/copy.png" />
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn upload-file btn-color" title="Upload File to S3 Bucket">
+                    <img style="width:20px;height:auto" src="../../assets/image/s3.png" />
+                </a>
+                <a draggable="false" class="waves-effect waves-light btn createTDE btn-color" title="Generate TDE Tableau">
+                    <img style="width:20px;height:auto" src="../../assets/image/tableau.png" />
+                </a>
+
+            </div>
+        </li>
+    </ol>
+    <!--Federated Query Textarea-->
+    <div class="container-fluid">
+        <div class="animated fadeIn">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="text-white">
+                        <div style="overflow:scroll;" class="card-body pb-0">
+                            <app-query-editor editorInput></app-query-editor>
+                        </div>
+                        <div class="prgbarclr progress">
+                            <div class="prgbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Alert notification bar displaying the message-->
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <div class="message-display" role="alert"></div>
+                </div>
+            </div>
+            <!--Tabs to see the Query history, Query results, Saved Query-->
+            <div class="row">
+                <div class="queryNavigator col-md-12 mb-4">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active query-results" data-toggle="tab" role="tab" data-target=".query-results-tab" aria-controls="home">
+                                <i style="color:#3a4955" class="fa fa-table"></i> Query Results</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link query-history" data-toggle="tab" (click)="getQueryHistorytab()" role="tab" aria-controls="profile">
+                                <i style="color:#76a5d2" class="fa fa-clock-o"></i> Query History </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link saved-queries" data-toggle="tab" (click)="getSavedQueriesTab()" role="tab" aria-controls="profile">
+                                <i style="color:#76a5d2" class="fa fa-save"></i> Saved Queries
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link data-viz-queries" data-toggle="tab" (click)="openVisualizationTab()" role="tab" aria-controls="profile">
+                                <i style="color:#60a60f" class="fa fa-bar-chart"></i> Data Visualization</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link data-sch-queries" data-toggle="tab" (click)="getSchedulerResultsTab()" role="tab" aria-controls="profile">
+                                <i style="color:#76a5d2" class="fa fa-list-alt"></i> Query Job Status <i (click)="getSchedulerResultsTab()" class="fa fa-refresh"></i></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active query-results-tab" style="max-height:800px;overflow:auto" role="tabpanel">
+                            <b>You don't have query results.</b>
+                        </div>
+                        <div class="tab-pane query-history-tab" style="max-height:800px;overflow:auto" role="tabpanel">
+                            <b>You don't have query history.</b>
+                        </div>
+                        <div class="tab-pane saved-query-tab" style="max-height:800px;overflow:auto" role="tabpanel">
+                            <b>You don't have saved history.</b>
+                        </div>
+                        <div class="tab-pane data-viz-tab" style="overflow:auto;min-height: 400px;" role="tabpanel">
+                            <div class="conddatainputvisual" style="display:inline-block">
+                                <div style="width:200px;display:inline-block">
+                                    <select class="icons getGraphvaldatType">
+                                        <option value="" disabled selected>Choose Visual mode</option>
+                                        <option value="file" class="left">Excel File</option>
+                                        <option value="table" class="left">Resultset Table</option>
+                                    </select>
+                                </div>
+                                <div style="width:300px;display:inline-block">
+                                    <select class="appxdat">
+                                        <option value="" disabled="" selected="">Choose X Axis</option>
+                                    </select>
+                                   </div>
+                                   <div style="width:300px;display:inline-block">
+                                    <select class="appydat" size="3">
+                                        <option value="" disabled="" selected="">Choose Y Axis</option>
+                                    </select>
+                                </div>
+                                <div style="width:200px;display: inline-block">
+                                        <select (change)="formatVisualizationOptions()" class="icons getGraphvaldat">
+                                            <option value="" disabled selected>Choose a graph type</option>
+                                            <option value="Lines" class="left">Lines</option>
+                                            <option value="Markers" class="left">Markers</option>
+                                            <option value="Bar" class="left">Bar</option>
+                                            <option value="Pie" class="left">Pie</option>
+                                            <option value="Scatter" class="left">Scatter</option>
+                                            <option value="LinesAndMarkers" class="left">Lines & Markers</option>
+                                        </select>
+                                    </div>
+                                    <div style="display: inline-block">
+                                            <button (click)="plotGraph()" class="modal-action mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn-bg-color">Visualize</button>
+                                        </div>
+                                <div class="row upload-file-button">
+                                    <div class="" style="text-align:center">
+                                        <label class="btn btn-default" [ngClass]="{'added-placeholder': file == '' || foucsedInput == 1}" style="margin-top:7px;position:relative;width:75%;margin:auto;margin-bottom:15px;margin-top:20px;">
+                                            <input type="file" (change)="selectParseFile($event)" placeholder="Upload file" accept=".xlsx" style="opacity:0;width:100%;z-index:9;position: relative;left: 0;top: 0;height:36px;">
+                                            <input type="text" class="feb-upload-inpt-tab" placeholder="" value="{{parseFile == null ? '' : parseFile.name}}">
+                                            <img _ngcontent-c2="" src="../../assets/image/upload.png" style="position:absolute;left:5px;top:5px;">
+                                            <span *ngIf="parseFile == null" class="feb-placeholder bulk-business-placeholder-left">Choose File</span>
+                                        </label>
+                                    </div>
+                                    <button type="button" style="margin-top:15px;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn-bg-color"
+                                        (click)="parseExcel()">Parse File</button>
+                                    <button type="button" style="margin-top:15px;margin-left:10px;" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn-bg-color"
+                                        (click)="clearVisualContent()">Clear Data</button>
+                                </div>
+                                <div class="progress prgbarviz">
+                                    <div class="datacolumnsinfoviz"></div>
+                                </div>
+                            </div>
+                            <div class="datavisualizationquerytab"></div>
+                        </div>
+                        <div class="tab-pane scheduled-query-tab" style="overflow:auto;" role="tabpanel">
+                            <b>You don't have any Scheduled Queries.</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Create Saved Queries Modal Structure -->
+        <div class="modal save-modal fed-bd-gry">
+            <div class="modal-content fed-pd-10 fed-bd-gry">
+                <h4>Save Query as...
+                    <i style="float:right" class="fa fa-close modal-action modal-close"></i>
+                </h4>
+                <div class="modal-content fed-pd-10 feb-pdb-35">
+                    <label>Name</label>
+                    <input class="svdqrynm" type="text" />
+                    <label>Description</label>
+                    <input class="svdqrydesc" type="text" />
+                    <button style="margin-left: auto;margin-right: auto;width: 20%" (click)="setNameToSaveQuery()" class="modal-action modal-close mdl-button mdl-js-button mdl-button--raised mdl-button--colored btn-bg-color">Save</button>
+                </div>
+            </div>
+        </div>
+        <!--Upload Content to s3 Bucket -->
+        <div class="modal upload-modal fed-bd-gry fed-height">
+            <div class="modal-content fed-pd-10 fed-bd-gry">
+                <h4>Upload content to
+                    <b>cod</b>-bucket
+                    <i style="float:right;margin-right:10px;" class="fa fa-close modal-action modal-close"></i>
+                </h4>
+                <div class="modal-content fed-pd-10 feb-pdb-35">
+                    <div class="" style="text-align:center">
+                        <label class="btn btn-default" [ngClass]="{'added-placeholder': file == '' || foucsedInput == 1}" style="margin-top:7px;position:relative;width:75%;margin:auto;margin-bottom:15px;margin-top:20px;">
+                            <input type="file" (change)="selectUploadFile($event)" (focusout)="foucsedInput = 0" (focus)="foucsedInput = 1" style="opacity:0;width:100%;z-index:9;position: absolute;left: 0;top: 0;height:36px;">
+                            <input type="text" class="feb-upload-inpt" placeholder="" value="{{uploadFile == null ? '' : uploadFile.name}}">
+                            <img _ngcontent-c2="" src="../../assets/image/upload.png" style="position:absolute;left:5px;top:5px;">
+                            <span *ngIf="uploadFile == null" class="feb-placeholder bulk-business-placeholder-left">Choose file</span>
+                        </label>
+                    </div>
+                    <div style="text-align:center">
+                        <button class="btn btn-success uploadbtn-bg-color" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dissbktmsg" style="margin-top:20px;">
+            </div>
+        </div>
+    </div>
+</main>

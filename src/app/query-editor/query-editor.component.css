@@ -1,0 +1,43 @@
+.editor {
+    white-space: pre;
+    caret-color: black;
+}
+
+.line-numbers {
+    background-color: #f1f1f1;
+    min-height: 400px;
+    color: #737373;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+    overflow:auto;
+    padding-top: 7px;
+    width: 3%;
+    height:auto;
+    float: left;
+}
+
+:host ::ng-deep span {
+    white-space: pre-wrap;
+    display: inline-block;
+}
+
+:host ::ng-deep span.Keyword {
+    color: blue;
+}
+
+:host ::ng-deep span.Reserved {
+    color: purple;
+}
+
+:host ::ng-deep span.Literal {
+    color: #CE9169;
+}
+
+:host ::ng-deep span.Comment {
+    color: #4B8B4E;
+}
+
+:host ::ng-deep span.Variable {
+    color: #5B9DDC;
+}

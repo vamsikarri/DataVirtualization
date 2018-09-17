@@ -1,0 +1,19 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "baseUrl": "./",
+    "module": "es2015"
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "types": [
+    "plotly.js"
+  ],"paths": {
+    "plotly.js": [
+      "../node_modules/plotly.js/dist/plotly-basic.js"
+    ]
+  }
+}

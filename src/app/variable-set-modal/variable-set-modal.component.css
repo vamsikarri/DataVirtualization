@@ -1,0 +1,63 @@
+.modal {
+    width: 600px !important ; 
+    height: 54% !important ;
+    overflow: auto; 
+    background-color: #fff !important;
+}
+
+:host ::ng-deep .row {
+    justify-content: center;
+    vertical-align: center
+}
+
+:host ::ng-deep .clear-row {
+    cursor: pointer;
+    color:red;
+}
+
+:host ::ng-deep .invalid {
+    border: 1px solid #8D1816;
+    border-radius: .25rem;
+}
+
+.variable-message {
+    margin-top: 10px;
+}
+
+.fed-pd-10{
+    padding: 10px !important;
+} 
+
+.fed-bd-gry{
+    background-color: #eaeaea !important;
+}
+
+.feb-pdb-35{
+    padding-bottom: 35px !important;
+}
+
+.fed-bd-gry h4{
+    font-size: 1.2rem !important;
+    color:#076fc9 !important;
+}
+
+.fed-bd-gry h4 i{
+    color:#5a5a5a !important;
+}
+
+.btn-bg-color{
+    background-color:#5fa845 !important;
+    color:#fff !important;
+}
+
+.btn-bg-color:hover, .btn-bg-color:active{
+    background-color:#498433;
+}
+
+.fed-height{
+    height:200px !important;
+    overflow: hidden !important;
+}
+.btn-color{
+    background-color:#f9f9f9;
+}

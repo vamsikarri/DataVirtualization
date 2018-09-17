@@ -1,0 +1,42 @@
+<header class="app-header navbar">
+    <a class="navbar-brand navbar-pd" href="#"><img style="width:168px;height:auto" src="../../assets/image/logo.png"/></a>
+    <!-- <button class="navbar-toggler" id="refreshdatabinf" type="button"><i class="fa fa-refresh"></i></button>-->
+    <button class="navbar-toggler sidebar-minimizer d-md-down-none" type="button">☰</button>
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Welcome </span>
+            <span id="roledata" class="">Admin</span>
+            </a>
+        </li>
+        <li class="nav-item dropdown d-md-down-none">
+            <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="icon-settings"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                <div class="dropdown-header text-center">
+                <strong>Settings</strong>
+                </div>
+                <a class="dropdown-item" href="#">
+                <i class="fa fa-question-circle" style="font-size: 17px"></i> Help</a>
+                <a class="dropdown-item" href="#">
+                <i class="icon-logout text-warning"></i> Logout</a>
+            </div>
+        </li>
+        <li class="nav-item"></li>
+    </ul>
+    </header>
+    <div class="app-body">
+    <div class="sidebar" appNavbar>
+        <div class="navigation-icons">
+            <div><i id="nav-back" class="material-icons">arrow_back</i></div>
+            <div><i id="nav-refresh" class="material-icons">refresh</i></div>
+            <div><i id="nav-forward" class="material-icons">arrow_forward</i></div>
+            <div class="nav-item" id="nav-name"></div>
+            <div><input type="search" id="nav-search" placeholder="Search"></div>
+        </div>
+        <div id="nav-message"></div>
+        <div class="nav" id="nav-browser"></div>
+        <ul id="nav-context-menu"></ul>
+    </div>
+</div>
